@@ -20,6 +20,9 @@ The code has only been tested to work within the Unix environment.
 Further online documentation is available at
 http://universityofwarwick.github.io/ACTIVIA
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.12612.png)]
+(http://dx.doi.org/10.5281/zenodo.12612)
+
 
 Building the code  
 -----------------
