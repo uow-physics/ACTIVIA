@@ -1,0 +1,5 @@
+doxygen
+bin
+lib
+tmp
+config.mk
