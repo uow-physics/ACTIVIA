@@ -54,7 +54,7 @@ Note that the shared library "lib/libActivia.so" needs to be included in the
 LD_LIBRARY_PATH environment variable before "bin/Activia" can be run using
 (for csh/tcsh):
 
-setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:<base directory of Activia>/lib
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:base_directory_of_Activia/lib
 
 This can be set using the "pathlib.sh" script from the Activia base
 directory. For csh/tcsh:
@@ -122,7 +122,7 @@ If there is an error saying that the Qt libraries cannot be found,
 then set the environment variable LD_LIBRARY_PATH to include the 
 Qt library path:
 
-setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:<location of Qt libraries>
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:location_of_Qt_libraries
 
 Right clicking on any section in the window will provide some 
 help/hints on how to fill in the form. Clicking on "Run" at the bottom 
