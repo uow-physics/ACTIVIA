@@ -1,0 +1,16 @@
+<map id="ActAbsInput" name="ActAbsInput">
+<area shape="rect" href="$classActAbsDecayAlgorithm.html" title="An abstract class that calculates radioactive isotope yields." alt="" coords="447,1645,631,1789"/>
+<area shape="rect" href="$classActTarget.html" title="Class to define the list of isotopes for a specific element (Z value)" alt="" coords="144,949,307,1336"/>
+<area shape="rect" href="$classActAbsOutput.html" title="Abstract class for output data." alt="" coords="400,468,539,799"/>
+<area shape="rect" href="$classActAbsCalcStatus.html" title="Keep track of what has been calculated (cross&#45;sections, yields)" alt="" coords="388,5,551,355"/>
+<area shape="rect" href="$classActBeamSpectrum.html" title="Abstract class to define the interface for an input beam spectrum." alt="" coords="145,421,305,845"/>
+<area shape="rect" href="$classActNuclide.html" title="Class to represent a nuclear isotope. Half&#45;life is in days." alt="" coords="777,33,889,327"/>
+<area shape="rect" href="$classActNucleiData.html" title="Class to hold data values for target and product nuclei." alt="" coords="841,912,975,1373"/>
+<area shape="rect" href="$classActTargetNuclide.html" title="Class to represent target nuclides." alt="" coords="928,459,1077,808"/>
+<area shape="rect" href="$classActFormulae.html" title="Class to calculate formulae found throughout the code." alt="" coords="164,43,287,317"/>
+<area shape="rect" href="$classActTime.html" title="Simple class to define the beam exposure and decay times (days)." alt="" coords="637,1061,781,1224"/>
+<area shape="rect" href="$classActAbsData.html" title="A simple abstract class to store data." alt="" coords="649,580,769,687"/>
+<area shape="rect" href="$classActProdNuclideList.html" title="Store a list of available product nuclides." alt="" coords="331,968,491,1317"/>
+<area shape="rect" href="$classActOutputSelection.html" title="Class to define xSec and yield output files, including format and level of detail." alt="" coords="739,1440,901,1995"/>
+<area shape="rect" href="$classActAbsXSecAlgorithm.html" title="Abstract class for defining algorithms for cross&#45;section calculations." alt="" coords="925,1608,1104,1827"/>
+</map>

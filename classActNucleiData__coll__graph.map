@@ -1,0 +1,5 @@
+<map id="ActNucleiData" name="ActNucleiData">
+<area shape="rect" href="$classActAbsData.html" title="A simple abstract class to store data." alt="" coords="5,487,125,593"/>
+<area shape="rect" href="$classActNuclide.html" title="Class to represent a nuclear isotope. Half&#45;life is in days." alt="" coords="259,5,371,299"/>
+<area shape="rect" href="$classActTargetNuclide.html" title="Class to represent target nuclides." alt="" coords="284,365,433,715"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="ActAbsData" name="ActAbsData">
+<area shape="rect" href="$classActNucleiData.html" title="Class to hold data values for target and product nuclei." alt="" coords="5,160,139,621"/>
+<area shape="rect" href="$classActTime.html" title="Simple class to define the beam exposure and decay times (days)." alt="" coords="163,309,307,472"/>
+</map>

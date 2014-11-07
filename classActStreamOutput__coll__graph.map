@@ -1,0 +1,4 @@
+<map id="ActStreamOutput" name="ActStreamOutput">
+<area shape="rect" href="$classActAbsOutput.html" title="Abstract class for output data." alt="" coords="17,421,156,752"/>
+<area shape="rect" href="$classActAbsCalcStatus.html" title="Keep track of what has been calculated (cross&#45;sections, yields)" alt="" coords="5,5,168,355"/>
+</map>

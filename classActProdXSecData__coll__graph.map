@@ -1,0 +1,12 @@
+<map id="ActProdXSecData" name="ActProdXSecData">
+<area shape="rect" href="$classActAbsOutput.html" title="Abstract class for output data." alt="" coords="17,1393,156,1724"/>
+<area shape="rect" href="$classActAbsCalcStatus.html" title="Keep track of what has been calculated (cross&#45;sections, yields)" alt="" coords="5,912,168,1261"/>
+<area shape="rect" href="$classActProdNuclideList.html" title="Store a list of available product nuclides." alt="" coords="180,1384,340,1733"/>
+<area shape="rect" href="$classActBeamSpectrum.html" title="Abstract class to define the interface for an input beam spectrum." alt="" coords="679,365,839,789"/>
+<area shape="rect" href="$classActNuclide.html" title="Class to represent a nuclear isotope. Half&#45;life is in days." alt="" coords="492,5,604,299"/>
+<area shape="rect" href="$classActNucleiData.html" title="Class to hold data values for target and product nuclei." alt="" coords="363,856,496,1317"/>
+<area shape="rect" href="$classActTargetNuclide.html" title="Class to represent target nuclides." alt="" coords="505,403,655,752"/>
+<area shape="rect" href="$classActFormulae.html" title="Class to calculate formulae found throughout the code." alt="" coords="697,15,820,289"/>
+<area shape="rect" href="$classActAbsXSecAlgorithm.html" title="Abstract class for defining algorithms for cross&#45;section calculations." alt="" coords="364,1449,543,1668"/>
+<area shape="rect" href="$classActAbsData.html" title="A simple abstract class to store data." alt="" coords="361,524,481,631"/>
+</map>

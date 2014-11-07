@@ -1,0 +1,13 @@
+<map id="include/Activia/ActBeamSpectrum.hh" name="include/Activia/ActBeamSpectrum.hh">
+<area shape="rect" href="$ActCosmicSpectrum_8hh.html" title="include/Activia/ActCosmic\lSpectrum.hh" alt="" coords="163,83,339,131"/>
+<area shape="rect" href="$ActGordonSpectrum_8hh.html" title="include/Activia/ActGordon\lSpectrum.hh" alt="" coords="363,83,533,131"/>
+<area shape="rect" href="$ActAbsInput_8cc.html" title="src/ActAbsInput.cc" alt="" coords="557,92,691,121"/>
+<area shape="rect" href="$ActBeamSpectrum_8cc.html" title="src/ActBeamSpectrum.cc" alt="" coords="715,92,885,121"/>
+<area shape="rect" href="$ActIsotopeProduction_8cc.html" title="src/ActIsotopeProduction.cc" alt="" coords="909,92,1096,121"/>
+<area shape="rect" href="$ActProdXSecData_8cc.html" title="src/ActProdXSecData.cc" alt="" coords="1120,92,1288,121"/>
+<area shape="rect" href="$ActSimpleDecayAlgorithm_8cc.html" title="src/ActSimpleDecayAlgorithm.cc" alt="" coords="1312,92,1525,121"/>
+<area shape="rect" href="$ActTarget_8cc.html" title="src/ActTarget.cc" alt="" coords="1549,92,1667,121"/>
+<area shape="rect" href="$ActCosmicSpectrum_8cc.html" title="src/ActCosmicSpectrum.cc" alt="" coords="5,179,187,208"/>
+<area shape="rect" href="$ActInput_8cc.html" title="src/ActInput.cc" alt="" coords="211,179,320,208"/>
+<area shape="rect" href="$ActGordonSpectrum_8cc.html" title="src/ActGordonSpectrum.cc" alt="" coords="359,179,537,208"/>
+</map>

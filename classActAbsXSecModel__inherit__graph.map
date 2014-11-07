@@ -1,0 +1,13 @@
+<map id="ActAbsXSecModel" name="ActAbsXSecModel">
+<area shape="rect" href="$classActSTBreakup.html" title="Calculate the breakup of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="5,459,149,603"/>
+<area shape="rect" href="$classActSTEvaporation.html" title="Calculate the evaporation of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="173,459,325,603"/>
+<area shape="rect" href="$classActSTFissBreakup.html" title="Calculate the breakup and fission of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="349,459,507,603"/>
+<area shape="rect" href="$classActSTFission.html" title="Calculate the fission of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="531,459,675,603"/>
+<area shape="rect" href="$classActSTFissSpallation.html" title="Calculate the fission &amp; spallation of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="699,459,867,603"/>
+<area shape="rect" href="$classActSTFissSpallGamma.html" title="Calculate the fission &amp; spallation (with gamma factor) of nuclei using Silberberg&#45;Tsao formulae..." alt="" coords="891,459,1075,603"/>
+<area shape="rect" href="$classActSTPeripheral.html" title="Calculate the peripheral reactions (ypxn) using Silberberg&#45;Tsao formulae." alt="" coords="1099,356,1243,705"/>
+<area shape="rect" href="$classActSTSLite.html" title="Calculate the cross&#45;setions for Z &lt; 29 targets using Silberberg&#45;Tsao formulae." alt="" coords="1267,309,1411,752"/>
+<area shape="rect" href="$classActSTSpallation.html" title="Calculate spallation cross&#45;sections for Z &gt; 28 targets using Silberberg&#45;Tsao formulae." alt="" coords="1435,375,1579,687"/>
+<area shape="rect" href="$classActTritiumModel.html" title="Calculate the tritium cross&#45;section." alt="" coords="1603,459,1747,603"/>
+<area shape="rect" href="$classActXSecDataModel.html" title="Use data tables to calculate cross&#45;sections." alt="" coords="1771,356,1933,705"/>
+</map>

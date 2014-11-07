@@ -1,0 +1,4 @@
+<map id="ActTritiumModel" name="ActTritiumModel">
+<area shape="rect" href="$classActAbsXSecModel.html" title="Abstract class to define a model to calculate cross&#45;sections." alt="" coords="5,347,163,584"/>
+<area shape="rect" href="$classActFormulae.html" title="Class to calculate formulae found throughout the code." alt="" coords="23,5,145,280"/>
+</map>

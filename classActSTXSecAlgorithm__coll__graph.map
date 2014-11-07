@@ -1,0 +1,23 @@
+<map id="ActSTXSecAlgorithm" name="ActSTXSecAlgorithm">
+<area shape="rect" href="$classActAbsXSecAlgorithm.html" title="Abstract class for defining algorithms for cross&#45;section calculations." alt="" coords="84,1496,263,1715"/>
+<area shape="rect" href="$classActNucleiData.html" title="Class to hold data values for target and product nuclei." alt="" coords="107,837,240,1299"/>
+<area shape="rect" href="$classActAbsData.html" title="A simple abstract class to store data." alt="" coords="5,515,125,621"/>
+<area shape="rect" href="$classActNuclide.html" title="Class to represent a nuclear isotope. Half&#45;life is in days." alt="" coords="259,5,371,299"/>
+<area shape="rect" href="$classActTargetNuclide.html" title="Class to represent target nuclides." alt="" coords="284,393,433,743"/>
+<area shape="rect" href="$classActSTSpallation.html" title="Calculate spallation cross&#45;sections for Z &gt; 28 targets using Silberberg&#45;Tsao formulae." alt="" coords="287,1459,431,1752"/>
+<area shape="rect" href="$classActAbsXSecModel.html" title="Abstract class to define a model to calculate cross&#45;sections." alt="" coords="1353,949,1511,1187"/>
+<area shape="rect" href="$classActTritiumModel.html" title="Calculate the tritium cross&#45;section." alt="" coords="2205,1533,2349,1677"/>
+<area shape="rect" href="$classActSTEvaporation.html" title="Calculate the evaporation of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="855,1543,1007,1668"/>
+<area shape="rect" href="$classActSTFissBreakup.html" title="Calculate the breakup and fission of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="1199,1543,1356,1668"/>
+<area shape="rect" href="$classActSTBreakup.html" title="Calculate the breakup of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="1716,1543,1860,1668"/>
+<area shape="rect" href="$classActSTSLite.html" title="Calculate the cross&#45;setions for Z &lt; 29 targets using Silberberg&#45;Tsao formulae." alt="" coords="1031,1384,1175,1827"/>
+<area shape="rect" href="$classActSTFissSpallation.html" title="Calculate the fission &amp; spallation of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="663,1543,831,1668"/>
+<area shape="rect" href="$classActSTFission.html" title="Calculate the fission of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="1548,1543,1692,1668"/>
+<area shape="rect" href="$classActXSecDataModel.html" title="Use data tables to calculate cross&#45;sections." alt="" coords="2019,1431,2181,1780"/>
+<area shape="rect" href="$classActSTFissSpallGamma.html" title="Calculate the fission &amp; spallation (with gamma factor) of nuclei using Silberberg&#45;Tsao formulae..." alt="" coords="455,1543,639,1668"/>
+<area shape="rect" href="$classActSTPeripheral.html" title="Calculate the peripheral reactions (ypxn) using Silberberg&#45;Tsao formulae." alt="" coords="1380,1440,1524,1771"/>
+<area shape="rect" href="$classActFormulae.html" title="Class to calculate formulae found throughout the code." alt="" coords="1371,431,1493,705"/>
+<area shape="rect" href="$classActSTSigUpdates.html" title="Update cross&#45;section values using Silberberg&#45;Tsao modifications." alt="" coords="976,1005,1128,1131"/>
+<area shape="rect" href="$classActXSecGraph.html" title="Graph of cross&#45;section (mb) and production rate (per kg per day) versus energy (MeV)." alt="" coords="2029,977,2171,1159"/>
+<area shape="rect" href="$classActAbsGraph.html" title="Abstract class for defining a graph." alt="" coords="2031,365,2169,771"/>
+</map>

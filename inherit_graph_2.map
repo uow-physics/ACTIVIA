@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" href="$classActAbsDecayAlgorithm.html" title="An abstract class that calculates radioactive isotope yields." alt="" coords="5,5,163,35"/>
+<area shape="rect" href="$classActSimpleDecayAlgorithm.html" title="Implementation of simple exponential decay for isotopes." alt="" coords="212,5,385,35"/>
+</map>

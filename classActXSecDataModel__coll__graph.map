@@ -1,0 +1,6 @@
+<map id="ActXSecDataModel" name="ActXSecDataModel">
+<area shape="rect" href="$classActAbsXSecModel.html" title="Abstract class to define a model to calculate cross&#45;sections." alt="" coords="5,477,163,715"/>
+<area shape="rect" href="$classActFormulae.html" title="Class to calculate formulae found throughout the code." alt="" coords="23,71,145,345"/>
+<area shape="rect" href="$classActXSecGraph.html" title="Graph of cross&#45;section (mb) and production rate (per kg per day) versus energy (MeV)." alt="" coords="187,505,328,687"/>
+<area shape="rect" href="$classActAbsGraph.html" title="Abstract class for defining a graph." alt="" coords="188,5,327,411"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="include/Activia/ActXSecGraph.hh" name="include/Activia/ActXSecGraph.hh">
+<area shape="rect" href="$ActProdXSecData_8hh.html" title="include/Activia/ActProdXSec\lData.hh" alt="" coords="240,83,427,131"/>
+<area shape="rect" href="$ActTarget_8cc.html" title="src/ActTarget.cc" alt="" coords="435,179,552,208"/>
+<area shape="rect" href="$ActXSecDataModel_8hh.html" title="include/Activia/ActXSecData\lModel.hh" alt="" coords="561,83,751,131"/>
+<area shape="rect" href="$ActXSecGraph_8cc.html" title="src/ActXSecGraph.cc" alt="" coords="775,92,921,121"/>
+<area shape="rect" href="$ActProdXSecData_8cc.html" title="src/ActProdXSecData.cc" alt="" coords="5,179,173,208"/>
+<area shape="rect" href="$ActSimpleDecayAlgorithm_8cc.html" title="src/ActSimpleDecayAlgorithm.cc" alt="" coords="197,179,411,208"/>
+<area shape="rect" href="$ActSTXSecAlgorithm_8cc.html" title="src/ActSTXSecAlgorithm.cc" alt="" coords="576,179,757,208"/>
+<area shape="rect" href="$ActXSecDataModel_8cc.html" title="src/ActXSecDataModel.cc" alt="" coords="781,179,957,208"/>
+</map>

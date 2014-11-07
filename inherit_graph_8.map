@@ -1,0 +1,14 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" href="$classActAbsXSecModel.html" title="Abstract class to define a model to calculate cross&#45;sections." alt="" coords="5,272,136,301"/>
+<area shape="rect" href="$classActSTBreakup.html" title="Calculate the breakup of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="211,5,315,35"/>
+<area shape="rect" href="$classActSTEvaporation.html" title="Calculate the evaporation of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="200,59,325,88"/>
+<area shape="rect" href="$classActSTFissBreakup.html" title="Calculate the breakup and fission of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="197,112,328,141"/>
+<area shape="rect" href="$classActSTFission.html" title="Calculate the fission of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="213,165,312,195"/>
+<area shape="rect" href="$classActSTFissSpallation.html" title="Calculate the fission &amp; spallation of nuclei using Silberberg&#45;Tsao formulae." alt="" coords="193,219,332,248"/>
+<area shape="rect" href="$classActSTFissSpallGamma.html" title="Calculate the fission &amp; spallation (with gamma factor) of nuclei using Silberberg&#45;Tsao formulae..." alt="" coords="184,272,341,301"/>
+<area shape="rect" href="$classActSTPeripheral.html" title="Calculate the peripheral reactions (ypxn) using Silberberg&#45;Tsao formulae." alt="" coords="205,325,320,355"/>
+<area shape="rect" href="$classActSTSLite.html" title="Calculate the cross&#45;setions for Z &lt; 29 targets using Silberberg&#45;Tsao formulae." alt="" coords="220,379,305,408"/>
+<area shape="rect" href="$classActSTSpallation.html" title="Calculate spallation cross&#45;sections for Z &gt; 28 targets using Silberberg&#45;Tsao formulae." alt="" coords="207,432,319,461"/>
+<area shape="rect" href="$classActTritiumModel.html" title="Calculate the tritium cross&#45;section." alt="" coords="205,485,320,515"/>
+<area shape="rect" href="$classActXSecDataModel.html" title="Use data tables to calculate cross&#45;sections." alt="" coords="195,539,331,568"/>
+</map>

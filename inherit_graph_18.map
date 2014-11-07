@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" href="$classActNuclide.html" title="Class to represent a nuclear isotope. Half&#45;life is in days." alt="" coords="5,32,91,61"/>
+<area shape="rect" href="$classActProdNuclide.html" title="Define a product nuclide, with any side branches." alt="" coords="144,5,256,35"/>
+<area shape="rect" href="$classActTargetNuclide.html" title="Class to represent target nuclides." alt="" coords="140,59,260,88"/>
+</map>

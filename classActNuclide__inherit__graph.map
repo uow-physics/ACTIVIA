@@ -1,0 +1,4 @@
+<map id="ActNuclide" name="ActNuclide">
+<area shape="rect" href="$classActProdNuclide.html" title="Define a product nuclide, with any side branches." alt="" coords="5,393,168,668"/>
+<area shape="rect" href="$classActTargetNuclide.html" title="Class to represent target nuclides." alt="" coords="192,347,341,715"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="ActAbsRun" name="ActAbsRun">
+<area shape="rect" href="$classActAbsCalcStatus.html" title="Keep track of what has been calculated (cross&#45;sections, yields)" alt="" coords="5,5,168,355"/>
+<area shape="rect" href="$classActAbsOutput.html" title="Abstract class for output data." alt="" coords="97,468,236,799"/>
+<area shape="rect" href="$classActOutputSelection.html" title="Class to define xSec and yield output files, including format and level of detail." alt="" coords="97,1440,260,1995"/>
+<area shape="rect" href="$classActAbsInput.html" title="Abstract class for inputing data." alt="" coords="501,2061,669,2355"/>
+<area shape="rect" href="$classActAbsDecayAlgorithm.html" title="An abstract class that calculates radioactive isotope yields." alt="" coords="284,1645,468,1789"/>
+<area shape="rect" href="$classActTarget.html" title="Class to define the list of isotopes for a specific element (Z value)" alt="" coords="443,949,605,1336"/>
+<area shape="rect" href="$classActBeamSpectrum.html" title="Abstract class to define the interface for an input beam spectrum." alt="" coords="563,421,723,845"/>
+<area shape="rect" href="$classActNuclide.html" title="Class to represent a nuclear isotope. Half&#45;life is in days." alt="" coords="912,33,1024,327"/>
+<area shape="rect" href="$classActNucleiData.html" title="Class to hold data values for target and product nuclei." alt="" coords="916,912,1049,1373"/>
+<area shape="rect" href="$classActTargetNuclide.html" title="Class to represent target nuclides." alt="" coords="895,459,1044,808"/>
+<area shape="rect" href="$classActFormulae.html" title="Class to calculate formulae found throughout the code." alt="" coords="581,43,704,317"/>
+<area shape="rect" href="$classActTime.html" title="Simple class to define the beam exposure and decay times (days)." alt="" coords="739,1061,883,1224"/>
+<area shape="rect" href="$classActAbsData.html" title="A simple abstract class to store data." alt="" coords="751,580,871,687"/>
+<area shape="rect" href="$classActProdNuclideList.html" title="Store a list of available product nuclides." alt="" coords="259,968,419,1317"/>
+<area shape="rect" href="$classActAbsXSecAlgorithm.html" title="Abstract class for defining algorithms for cross&#45;section calculations." alt="" coords="895,1608,1073,1827"/>
+</map>

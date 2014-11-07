@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" href="$classActAbsOutput.html" title="Abstract class for output data." alt="" coords="5,5,109,35"/>
+<area shape="rect" href="$classActStreamOutput.html" title="A class for writing data to an output ASCII text file." alt="" coords="157,5,280,35"/>
+</map>

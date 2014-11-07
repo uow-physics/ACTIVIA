@@ -1,0 +1,11 @@
+<map id="ActAbsDecayAlgorithm" name="ActAbsDecayAlgorithm">
+<area shape="rect" href="$classActTarget.html" title="Class to define the list of isotopes for a specific element (Z value)" alt="" coords="181,912,344,1299"/>
+<area shape="rect" href="$classActAbsOutput.html" title="Abstract class for output data." alt="" coords="17,468,156,799"/>
+<area shape="rect" href="$classActAbsCalcStatus.html" title="Keep track of what has been calculated (cross&#45;sections, yields)" alt="" coords="5,5,168,355"/>
+<area shape="rect" href="$classActBeamSpectrum.html" title="Abstract class to define the interface for an input beam spectrum." alt="" coords="183,421,343,845"/>
+<area shape="rect" href="$classActNuclide.html" title="Class to represent a nuclear isotope. Half&#45;life is in days." alt="" coords="199,33,311,327"/>
+<area shape="rect" href="$classActFormulae.html" title="Class to calculate formulae found throughout the code." alt="" coords="335,43,457,317"/>
+<area shape="rect" href="$classActTime.html" title="Simple class to define the beam exposure and decay times (days)." alt="" coords="368,1024,512,1187"/>
+<area shape="rect" href="$classActAbsData.html" title="A simple abstract class to store data." alt="" coords="380,580,500,687"/>
+<area shape="rect" href="$classActProdNuclideList.html" title="Store a list of available product nuclides." alt="" coords="536,931,696,1280"/>
+</map>

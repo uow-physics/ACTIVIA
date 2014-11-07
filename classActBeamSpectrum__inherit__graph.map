@@ -1,0 +1,4 @@
+<map id="ActBeamSpectrum" name="ActBeamSpectrum">
+<area shape="rect" href="$classActCosmicSpectrum.html" title="Definition of a cosmic ray spectrum." alt="" coords="5,515,176,640"/>
+<area shape="rect" href="$classActGordonSpectrum.html" title="Definition of the Gordon et al. cosmic ray spectrum parameterisation." alt="" coords="200,515,368,640"/>
+</map>
