@@ -1,0 +1,4 @@
+NetGe 25 54 ALEKSANDROV
+#REACTION   (32-GE-0(P,X)25-MN-54,IND,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+660.0       11.          11.2        0.5

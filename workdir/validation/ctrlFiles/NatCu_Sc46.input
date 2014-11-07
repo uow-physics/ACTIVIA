@@ -1,0 +1,9 @@
+NatCu
+output/NatCu_Sc46_xSec.root xSecEData
+4
+measurements/sigmaEData/NatCu_Sc46_Data1.dat
+measurements/sigmaEData/NatCu_Sc46_Data2.dat
+measurements/sigmaEData/NatCu_Sc46_Data3.dat
+measurements/sigmaEData/NatCu_Sc46_Data4.dat
+output/NatCu_Sc46_Data.root
+pngFiles/NatCu_Sc46.png

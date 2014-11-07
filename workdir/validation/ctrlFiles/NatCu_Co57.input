@@ -1,0 +1,18 @@
+NatCu
+output/NatCu_Co57_xSec.root xSecEData
+13
+measurements/sigmaEData/NatCu_Co57_Data1.dat
+measurements/sigmaEData/NatCu_Co57_Data2.dat
+measurements/sigmaEData/NatCu_Co57_Data3.dat
+measurements/sigmaEData/NatCu_Co57_Data4.dat
+measurements/sigmaEData/NatCu_Co57_Data5.dat
+measurements/sigmaEData/NatCu_Co57_Data6.dat
+measurements/sigmaEData/NatCu_Co57_Data7.dat
+measurements/sigmaEData/NatCu_Co57_Data8.dat
+measurements/sigmaEData/NatCu_Co57_Data9.dat
+measurements/sigmaEData/NatCu_Co57_Data10.dat
+measurements/sigmaEData/NatCu_Co57_Data11.dat
+measurements/sigmaEData/NatCu_Co57_Data12.dat
+measurements/sigmaEData/NatCu_Co57_Data13.dat
+output/NatCu_Co57_Data.root
+pngFiles/NatCu_Co57.png

@@ -1,0 +1,335 @@
+#! /bin/bash
+
+# Default options
+PACKAGE=Activia
+
+COMPMODE=OPT # Optimised
+PREFIX=.
+
+# The src, include, tmp, lib and bin directories
+SRCDIR=src
+INCDIR=include
+FULLINCDIR=${INCDIR}/${PACKAGE}
+TMPDIR=tmp
+LIBDIR=lib
+BINDIR=bin
+
+# Initialise ROOT installation settings
+ROOTSYS=
+DISABLE_ROOT=0
+ACT_USE_ROOT=
+# Check that the root-config option is present. If so,
+# automatically set the ROOTSYS variable. Note that
+# using the --rootdir option will override this setting
+# since the user may want to test a different ROOT installation
+
+ROOTINCDIR=
+ROOTLIBS=
+FOUND_ROOT=0
+if [ `type -p root-config` ]; then
+   ROOTSYS=`root-config --prefix`   
+   echo "Found the ROOT installation: ROOTSYS = $ROOTSYS"
+   FOUND_ROOT=1
+fi
+
+# Initialise Qt installation settings
+ACT_USE_QT=
+# The directory containing the Qt header files
+ACT_QTINC=/usr/include
+# The directory containing the Qt libraries
+ACT_QTLIB=/usr/lib
+# The location of the Qt Meta Object Compiler "moc" command
+ACT_MOC=/usr/bin/moc
+
+# Check that the Qt include directories and moc program 
+# are available
+
+FOUND_MOC=0
+if [ `type -p ${ACT_MOC}` ]; then
+   echo "Found the Qt Meta Object Compiler moc: ACT_MOC = $ACT_MOC"
+   FOUND_MOC=1
+fi
+
+# Check that we can find the QtGui and QtCore include directories
+FOUND_QT=0
+if [ -d "${ACT_QTINC}/QtCore" ] && [ -d "${ACT_QTINC}/QtGui" ] ; then
+   echo "Found the QtCore and QtGui include directories"
+   FOUND_QT=1
+fi
+
+#--------------------------------------------------------------
+
+check_arguments () {
+
+  for arg in $* ; do
+
+    if [ "x$arg" = "x--enable-debug" ] ; then
+      COMPMODE=DBG
+
+    elif [ "x$arg" = "x--disable-root" ] ; then
+      echo "Disabling ROOT"
+      DISABLE_ROOT=1
+
+    elif [ "x$arg" = "x--gui" ] ; then
+      echo "Enabling GUI"
+      ACT_USE_QT=1
+
+    elif [ "x$arg" = "x--help" ] ; then
+      echo -e \
+      "\nUsage: ./configure [options], where options are:\n\n"\
+      "--help                           : Prints this help\n"\
+      "--gui                            : Build the Graphical User Interface using Qt\n"\
+      "--qtlib=[full directory path]    : Set the location of the Qt lib directory (default is /usr/lib)\n"\
+      "--qtinc=[full directory path]    : Set the location of the Qt include directory (default is /usr/include)\n"\
+      "--moc=[location of moc command]  : Set the location of the Qt Meta Object Compiler (default is /usr/bin/moc)\n"\
+      "--rootsys=[full directory path]  : Set the ROOT (http://root.cern.ch) base directory. Note that this\n"\
+      "                                   script tries to automatically find ROOT on your system\n"\
+      "--disable-root                   : Does not build with ROOT, even if ROOT libraries are available\n"\
+      "--prefix=[installation path]     : Specifies installation path\n"\
+      "--enable-debug                   : Turns on compilation debugging flags\n"
+      exit
+
+    else
+
+      if [ "x${arg}" = "x${arg/=/}" ] ; then
+
+        echo "${arg}: wrong option. Ignored." >&2
+
+      else
+
+        option=${arg/=*/}
+        value=${arg/*=/}
+
+        if [ "x${option}" = "x--prefix" ] ; then
+          PREFIX=${value}
+
+        elif [ "x${option}" = "x--qtlib" ] ; then
+	  ACT_QTLIB=${value}
+
+        elif [ "x${option}" = "x--qtinc" ] ; then
+	  # Check that we can find the QtGui and QtCore include directories
+	  if [ -d "${value}/QtCore" ] && [ -d "${value}/QtGui" ] ; then
+	    echo "Found the QtCore and QtGui include directories"	    
+	    ACT_QTINC=${value}
+	    FOUND_MOC=1
+	  else
+	    echo "Could not find the Qt include directories under ${value}"
+	    if [ $FOUND_QT = 1 ]; then
+	      echo "Using the previously found location for the Qt include directories: ${ACT_QTINC}"
+	    fi
+	  fi
+
+	elif [ "x${option}" = "x--moc" ] ; then
+	  # Check that the moc program is there
+	  if [ `type -p ${value}` ]; then
+	    echo "Setting the moc program to be ${value}"
+	    ACT_MOC=${value}
+	    FOUND_MOC=1
+	  else
+	    echo "Could not find the Qt meta-object compiler program, moc"
+	    if [ $FOUND_MOC = 1 ]; then
+	      echo "Using the previously found location for moc: ${ACT_MOC}"
+	    fi
+	  fi
+
+        elif [ "x${option}" = "x--rootsys" ] ; then
+          ROOTSYS=${value}
+	  # Check that the root installation is there
+	  if [ `type -p ${ROOTSYS}/bin/root-config` ]; then
+	    echo "Resetting ROOTSYS to ${ROOTSYS}"
+	    FOUND_ROOT=1
+          else
+	    echo "Could not find the specified ROOT installation at ${ROOTSYS}"
+	    if [ $FOUND_ROOT = 1 ]; then
+	      ROOTSYS=`root-config --prefix`
+	      echo "Using the ROOT installation previously found at ${ROOTSYS}."
+            fi
+	  fi
+
+        else
+          echo "${arg}: wrong option. Ignored." >&2
+        fi
+
+      fi
+    fi
+  done
+  return
+}
+
+#---------------------------------------
+
+# Check that the ROOT and Qt installation directories are OK
+
+check_dirs() {
+
+  # Check the Qt include directories and moc proprocessor are OK
+  if [[ $ACT_USE_QT = 1 ]]; then
+      
+    if [ $FOUND_MOC != 1 ] || [ $FOUND_QT != 1 ]; then      
+      echo -e \
+      "Error. We couldn't find the moc preprocessor or the Qt include directories\n"\
+      "Not enabling the GUI\n"\
+       ACT_USE_QT = 0
+    fi
+  fi
+
+  if [ $DISABLE_ROOT != 1 ] && [ $FOUND_ROOT = 1 ]; then
+
+    # Check that the TROOT.h file is available from the ROOT installation    
+    ROOTINCDIR=`${ROOTSYS}/bin/root-config --incdir`
+    rootFile=${ROOTINCDIR}/TROOT.h
+
+    if [ -f $rootFile ]; then
+      echo "ROOTSYS set to $ROOTSYS";
+      ACT_USE_ROOT=1
+      ROOTLIBS=`${ROOTSYS}/bin/root-config --libs`
+      # Add the TSpectrum library
+      ROOTLIBS+=" -lSpectrum"
+      echo "ROOTLIBS = ${ROOTLIBS}"
+    else
+      echo "There is a problem. ROOTINCDIR = ${ROOTINCDIR}, but TROOT.h cannot be found..."
+      exit 1
+    fi
+  fi
+
+}
+
+#---------------------------------------
+
+check_arguments $*
+check_dirs
+
+# Find the plaform
+ARCH=`uname`
+echo "ARCH is ${ARCH}"
+# Compilation options
+# Compiler
+CXX=g++
+# Optimised compiler options
+CXXFLAGS_OPT="-g -O2 -Wall -Wextra -Woverloaded-virtual -Werror -fPIC"
+# Debug mode compiler options
+CXXFLAGS_DBG="-g -Wall -Wextra -Woverloaded-virtual -Werror -fPIC"
+
+# Option to generate dependency files
+MFLAGS=-MM
+
+# Shared library flags
+SOFLAGS=-shared
+
+# MacOS options (not fully tested)
+if [[ $ARCH == Darwin* ]]; then
+  CXXFLAGS_OPT="-g -O3 -Wall -Wextra -Woverloaded-virtual -Werror -fPIC -m64"
+  CXXFLAGS_DBG="-g -Wall -Wextra -Woverloaded-virtual -Werror -fPIC -m64"
+  SOFLAGS="-m64 -dynamiclib -single_module -undefined dynamic_lookup"
+fi
+
+echo "Compilation mode is ${COMPMODE}"
+echo "ACT_USE_ROOT is ${ACT_USE_ROOT}" 
+echo "ACT_USE_QT is ${ACT_USE_QT}"
+
+
+CXXFLAGS=${CXXFLAGS_OPT}
+
+if [ ${COMPMODE} = DBG ]; then
+   CXXFLAGS=${CXXFLAGS_DBG}
+fi
+
+# The list of source files
+# First remove any moc source files
+rmMoc=`rm -rf ${SRCDIR}/moc_*.cc`
+
+CCLIST=`ls ${SRCDIR}/*.cc | tr '\n' ' '`
+# The list of header files
+HHDIR=${INCDIR}/${PACKAGE}
+HHLIST=`ls ${HHDIR}/*.hh`
+
+EXTRAFLAGS=
+# Check if ROOT is enabled and add the libraries
+if [[ $ACT_USE_ROOT = 1 ]]; then
+   EXTRAFLAGS+="-DACT_USE_ROOT "
+fi
+
+# Check if Qt is enabled and set additional variables
+# for the Makefile
+QTDEFINE=
+QTINCLUDE=
+QTLIBS=
+
+if [[ $ACT_USE_QT = 1 ]]; then
+   EXTRAFLAGS+="-DACT_USE_QT "
+   # Set the libraries for the moc command
+   QTDEFINE="-DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED"
+   QTINCLUDE="-I${INCDIR} -I${ACT_QTINC}"
+
+   # Find which header files contain the Q_OBJECT macro. 
+   # We need to run the moc command on them
+   QTHLIST=$(grep -l Q_OBJECT ${HHLIST} | tr '\n' ' ')
+   QTTMPLIST=${QTHLIST//${HHDIR}\//${SRCDIR}\/moc\_}
+   QTCLIST=${QTTMPLIST//hh/cc}
+   CCLIST+=${QTCLIST}
+   # The required Qt libraries
+   QTLIBS="-L${ACT_QTLIB} -lQtCore -lQtGui"
+fi
+
+# Find the list of any binary C++ files, i.e. those with "main".
+# Use the grep command for printing filenames that match the regular
+# expression, then convert the newlines from the grep output into spaces
+BINCCLIST=$(grep -l "^[[:space:]]*int[[:space:]]*main\>" *.cc | tr '\n' ' ')
+
+# Write the config.mk file for the Makefile
+
+echo -n "Creating config.mk ..."
+
+rm -f config.mk
+
+cat > config.mk << EOF
+
+PACKAGE = ${PACKAGE}
+SHELL = /bin/bash
+
+PREFIX = ${PREFIX}
+ARCH = ${ARCH}
+COMPMODE = ${COMPMODE}
+
+CXX = ${CXX}
+CXXFLAGS = ${CXXFLAGS}
+MFLAGS = ${MFLAGS}
+SOFLAGS = ${SOFLAGS}
+
+# Set-up all of the include directories
+SRCDIR = ${SRCDIR}
+INCDIR = ${INCDIR}
+FULLINCDIR = ${FULLINCDIR}
+LIBDIR = ${LIBDIR}
+BINDIR = ${BINDIR}
+TMPDIR = ${TMPDIR}
+
+DEPDIR = \$(TMPDIR)/dependencies
+OBJDIR = \$(TMPDIR)/objects
+
+ROOTINCDIR = ${ROOTINCDIR}
+ROOTLIBS = ${ROOTLIBS}
+ACT_USE_ROOT = ${ACT_USE_ROOT}
+ACT_USE_QT = ${ACT_USE_QT}
+
+EXTRAFLAGS = ${EXTRAFLAGS}
+
+CCLIST = ${CCLIST}
+
+BINCCLIST = ${BINCCLIST}
+
+ACT_QTINC = ${ACT_QTINC}
+ACT_QTLIB = ${ACT_QTLIB}
+ACT_MOC = ${ACT_MOC}
+
+QTDEFINE = ${QTDEFINE}
+QTINCLUDE = ${QTINCLUDE}
+QTLIBS = ${QTLIBS}
+
+EOF
+
+echo " done"
+echo "Build the code using make"
+echo "Make sure ${PWD}/lib is included in the environment variable LD_LIBRARY_PATH; see pathlib.sh"
+
+exit

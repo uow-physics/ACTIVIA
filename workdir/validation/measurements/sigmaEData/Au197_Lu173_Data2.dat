@@ -1,0 +1,5 @@
+Au197 71 173 Kaufman
+#REACTION   (79-AU-197(P,X)71-LU-173,CUM,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+11500       0          20.5        0.0
+300000       0          19.07        0.04

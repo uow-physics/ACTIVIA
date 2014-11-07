@@ -1,0 +1,7 @@
+NatGe
+output/NatGe_Ge68_xSec.root xSecEData
+2
+measurements/sigmaEData/NatGe_Ge68_Data1.dat
+measurements/sigmaEData/NatGe_Ge68_Data2.dat
+output/NatGe_Ge68_Data.root
+pngFiles/NatGe_Ge68.png

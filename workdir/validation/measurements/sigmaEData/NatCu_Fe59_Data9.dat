@@ -1,0 +1,4 @@
+NatCu 26 59 ALEKSANDROV'90
+#REACTION   (29-CU-0(P,X)26-FE-59,CUM,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+1000       44.0          1.66        0.14

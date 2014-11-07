@@ -1,0 +1,4 @@
+NatGe 32 68 ALEKSANDROV
+#REACTION   (32-GE-0(P,X)32-GE-68,CUM,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+660.      26.4           10.8        2.2

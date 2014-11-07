@@ -1,0 +1,12 @@
+NatCu
+output/NatCu_Zn65_DataTables_xSec.root xSecEData
+7
+measurements/sigmaEData/NatCu_Zn65_Data1.dat
+measurements/sigmaEData/NatCu_Zn65_Data2.dat
+measurements/sigmaEData/NatCu_Zn65_Data3.dat
+measurements/sigmaEData/NatCu_Zn65_Data4.dat
+measurements/sigmaEData/NatCu_Zn65_Data5.dat
+measurements/sigmaEData/NatCu_Zn65_Data6.dat
+measurements/sigmaEData/NatCu_Zn65_Data7.dat
+output/NatCu_Zn65_DataTables_Data.root
+pngFiles/NatCu_Zn65_DataTables.png

@@ -1,0 +1,7 @@
+Au197
+output/Au197_Lu173_xSec.root xSecEData
+2
+measurements/sigmaEData/Au197_Lu173_Data1.dat
+measurements/sigmaEData/Au197_Lu173_Data3.dat
+output/Au197_Lu173_Data.root
+pngFiles/Au197_Lu173.png

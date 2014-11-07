@@ -1,0 +1,4 @@
+NatCu 27 60 CLINE
+#REACTION   (29-CU-0(P,X)27-CO-55,CUM,SIG,,,EXP)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+590.0       0          4.        0.5

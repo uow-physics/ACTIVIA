@@ -1,0 +1,7 @@
+NatTe
+output/NatTe_Co60_xSec.root xSecEData
+2
+measurements/sigmaEData/NatTe_Co60_Data1.dat
+measurements/sigmaEData/NatTe_Co60_Data2.dat
+output/NatTe_Co60_Data.root
+pngFiles/NatTe_Co60.png

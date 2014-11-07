@@ -1,0 +1,7 @@
+NatCu 30 65 SCHIEKEL
+#REACTION  M(29-CU-0(P,X)30-ZN-65,,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+226       1.8          0.79        0.0774
+271       1.28          0.647        0.0689
+338       1.74          0.581        0.0621
+375       1.26          0.562        0.0634

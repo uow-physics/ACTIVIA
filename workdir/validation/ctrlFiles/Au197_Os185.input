@@ -1,0 +1,6 @@
+Au197
+output/Au197_Os185_xSec.root xSecEData
+1
+measurements/sigmaEData/Au197_Os185_Data1.dat
+output/Au197_Os185_Data.root
+pngFiles/Au197_Os185.png

@@ -1,0 +1,14 @@
+NatCu
+output/NatCu_Mn54_xSec.root xSecEData
+9
+measurements/sigmaEData/NatCu_Mn54_Data1.dat
+measurements/sigmaEData/NatCu_Mn54_Data2.dat
+measurements/sigmaEData/NatCu_Mn54_Data3.dat
+measurements/sigmaEData/NatCu_Mn54_Data4.dat
+measurements/sigmaEData/NatCu_Mn54_Data5.dat
+measurements/sigmaEData/NatCu_Mn54_Data6.dat
+measurements/sigmaEData/NatCu_Mn54_Data7.dat
+measurements/sigmaEData/NatCu_Mn54_Data8.dat
+measurements/sigmaEData/NatCu_Mn54_Data9.dat
+output/NatCu_Mn54_Data.root
+pngFiles/NatCu_Mn54.png

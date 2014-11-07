@@ -1,0 +1,7 @@
+NatGe
+output/NatGe_Zn65_xSec.root xSecEData
+2
+measurements/sigmaEData/NatGe_Zn65_Data1.dat
+measurements/sigmaEData/NatGe_Zn65_Data2.dat
+output/NatGe_Zn65_Data.root
+pngFiles/NatGe_Zn65.png

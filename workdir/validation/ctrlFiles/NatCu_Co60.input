@@ -1,0 +1,20 @@
+NatCu
+output/NatCu_Co60_xSec.root xSecEData
+15
+measurements/sigmaEData/NatCu_Co60_Data1.dat
+measurements/sigmaEData/NatCu_Co60_Data2.dat
+measurements/sigmaEData/NatCu_Co60_Data3.dat
+measurements/sigmaEData/NatCu_Co60_Data4.dat
+measurements/sigmaEData/NatCu_Co60_Data5.dat
+measurements/sigmaEData/NatCu_Co60_Data6.dat
+measurements/sigmaEData/NatCu_Co60_Data7.dat
+measurements/sigmaEData/NatCu_Co60_Data8.dat
+measurements/sigmaEData/NatCu_Co60_Data9.dat
+measurements/sigmaEData/NatCu_Co60_Data10.dat
+measurements/sigmaEData/NatCu_Co60_Data11.dat
+measurements/sigmaEData/NatCu_Co60_Data12.dat
+measurements/sigmaEData/NatCu_Co60_Data13.dat
+measurements/sigmaEData/NatCu_Co60_Data14.dat
+measurements/sigmaEData/NatCu_Co60_Data15.dat
+output/NatCu_Co60_Data.root
+pngFiles/NatCu_Co60.png

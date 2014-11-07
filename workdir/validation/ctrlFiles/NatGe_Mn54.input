@@ -1,0 +1,6 @@
+NatGe
+output/NatGe_Mn54_xSec.root xSecEData
+1
+measurements/sigmaEData/NatGe_Mn54_Data1.dat
+output/NatGe_Mn54_Data.root
+pngFiles/NatGe_Mn54.png

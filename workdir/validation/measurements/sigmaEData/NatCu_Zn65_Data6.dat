@@ -1,0 +1,4 @@
+NatCu 30 65 Cumming
+#REACTION  M(29-CU-0(P,X)30-ZN-65,,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+3.9e3      78.0          0.67        0.06

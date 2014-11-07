@@ -1,0 +1,4 @@
+NatCu 27 60 ALEKSANDROV
+#REACTION   (29-CU-0(P,X)27-CO-60-G,M+,SIG) Shielded.
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+1000.0     40.0          12.        1.7

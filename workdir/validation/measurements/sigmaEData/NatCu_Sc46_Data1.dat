@@ -1,0 +1,11 @@
+NatCu 21 46 GREENWOOD
+#REACTION   (29-CU-0(P,X)21-SC-46,CUM,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+100       0          0.02        0
+150       0          0.188        0
+200       0          0.542        0
+250       0          1.07        0
+300       0          1.64        0
+350       0          2.24        0
+400       0          3.02        0
+450       0          3.28        0

@@ -1,0 +1,6 @@
+NatTe
+output/NatTe_Sb124_xSec.root xSecEData
+1
+measurements/sigmaEData/NatTe_Sb124_Data1.dat
+output/NatTe_Sb124_Data.root
+pngFiles/NatTe_Sb124.png

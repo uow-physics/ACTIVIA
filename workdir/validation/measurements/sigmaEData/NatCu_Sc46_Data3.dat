@@ -1,0 +1,4 @@
+NatCu 21 46 MICHEL
+#REACTION  7(29-CU-0(P,X)4-BE-7,IND,SIG,,,EXP)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+660       0          0.2        0.136

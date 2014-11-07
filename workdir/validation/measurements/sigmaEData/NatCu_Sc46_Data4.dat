@@ -1,0 +1,4 @@
+NatCu 21 46 ORTH
+#REACTION   (29-CU-0(P,X)21-SC-46,IND/M+,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+590       0          4.92        0.26

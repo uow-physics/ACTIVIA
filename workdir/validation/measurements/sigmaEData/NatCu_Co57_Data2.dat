@@ -1,0 +1,5 @@
+NatCu 27 57 Yashima
+#REACTION   (29-CU-0(10-NE-20,X)27-CO-57,CUM,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+2000       0          66.053        10.721
+4600       0          47.055        7.266

@@ -1,0 +1,5 @@
+NatCu 27 60 Sisterson
+#REACTION   (29-CU-0(N,X)27-CO-60,,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+70.7       5.8          17.6        8.6
+110.8       4.2          29.1        8.6

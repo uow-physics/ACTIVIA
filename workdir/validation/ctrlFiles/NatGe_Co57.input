@@ -1,0 +1,6 @@
+NatGe
+output/NatGe_Co57_xSec.root xSecEData
+1
+measurements/sigmaEData/NatGe_Co57_Data1.dat
+output/NatGe_Co57_Data.root
+pngFiles/NatGe_Co57.png

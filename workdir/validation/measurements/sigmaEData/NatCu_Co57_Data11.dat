@@ -1,0 +1,4 @@
+NatCu 27 57 ORTH'76
+#REACTION   (29-CU-0(P,X)27-CO-57,CUM,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+590       0          29.9        1.95

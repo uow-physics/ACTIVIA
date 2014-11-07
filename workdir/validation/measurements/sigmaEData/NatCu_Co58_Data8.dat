@@ -1,0 +1,7 @@
+NatCu 27 58 MICHEL'95
+#REACTION   (29-CU-0(P,X)27-CO-58-G,M+,SIG)       Independent.
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+800       0          32.7        2.5
+1200       0          29.1        2.3
+1600       0          28.4        2.5
+2600       0          25.5        2.3

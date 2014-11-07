@@ -1,0 +1,4 @@
+NatCu 27 60 CUMMING
+#REACTION   (29-CU-0(P,X)29-CU-60,CUM,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+3.9e3       78.0         1.92        0.06

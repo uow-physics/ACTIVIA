@@ -1,0 +1,4 @@
+NatCu 27 57 MICHEL'86
+#REACTION  F(29-CU-0(P,X)26-FE-59,,SIG)
+E(MeV)  DeltaE(MeV)   Sigma(mb)    SigmaErr(mb)
+600       0          24.89        0.21

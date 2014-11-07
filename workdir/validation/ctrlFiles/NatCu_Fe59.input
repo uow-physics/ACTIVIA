@@ -1,0 +1,14 @@
+NatCu
+output/NatCu_Fe59_xSec.root xSecEData
+9
+measurements/sigmaEData/NatCu_Fe59_Data1.dat
+measurements/sigmaEData/NatCu_Fe59_Data2.dat
+measurements/sigmaEData/NatCu_Fe59_Data3.dat
+measurements/sigmaEData/NatCu_Fe59_Data4.dat
+measurements/sigmaEData/NatCu_Fe59_Data5.dat
+measurements/sigmaEData/NatCu_Fe59_Data6.dat
+measurements/sigmaEData/NatCu_Fe59_Data7.dat
+measurements/sigmaEData/NatCu_Fe59_Data8.dat
+measurements/sigmaEData/NatCu_Fe59_Data9.dat
+output/NatCu_Fe59_Data.root
+pngFiles/NatCu_Fe59.png

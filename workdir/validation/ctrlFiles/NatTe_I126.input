@@ -1,0 +1,8 @@
+NatTe
+output/NatTe_I126_xSec.root xSecEData
+3
+measurements/sigmaEData/NatTe_I126_Data1.dat
+measurements/sigmaEData/NatTe_I126_Data2.dat
+measurements/sigmaEData/NatTe_I126_Data3.dat
+output/NatTe_I126_Data.root
+pngFiles/NatTe_I126.png

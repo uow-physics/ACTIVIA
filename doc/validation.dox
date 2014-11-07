@@ -1,0 +1,79 @@
+/*!
+
+\page valid Comparison of Activia calculations with cross-section measurements
+
+The directory <b>workdir/validation</b> contains the script <b>runComparisons.sh</b>
+that can be run to compare various experimental measurements (obtained from the 
+<a href="https://www-nds.iaea.org/exfor/exfor.htm">EXFOR database</a>) 
+with the calculations from Activia for a range of target materials and activation
+products:
+
+<b>
+sh runComparisons.sh
+</b>
+
+Before this can be run, the <b>analysis</b> program needs to be built, which requires
+<a href="http://root.cern.ch">ROOT</a>:
+
+<b>
+make
+</b>
+
+The comparison creates a series of plots in the <b>workdir/validation/pngFiles</b> directory.
+
+Note that some of the comparisons require the MENDL-2 data files to be present
+in <b>workdir/MENDL</b> (specifically the last four examples in runComparisons.sh);
+see \link mendl <b>workdir/MENDL/README.md</b>\endlink.
+
+Below are the reference plots. Many of the specific references for the measurements 
+can be looked up in the bibliography section of the 
+<a href="http://uk.arxiv.org/abs/0709.3472">Activia paper</a>.
+
+<hr>
+
+\section natcu Cross-section plots for protons on a natural copper target
+
+\image html NatCu_Co56.png "Cross-section of Co-56 produced by protons on a natural Cu target"
+\image html NatCu_Co57.png "Cross-section of Co-57 produced by protons on a natural Cu target"
+\image html NatCu_Co58.png "Cross-section of Co-58 produced by protons on a natural Cu target"
+\image html NatCu_Co60.png "Cross-section of Co-60 produced by protons on a natural Cu target"
+\image html NatCu_Co60_DataTables.png "Cross-section of Co-60 produced by protons on a natural Cu target with MENDL-2 data tables"
+\image html NatCu_Fe59.png "Cross-section of Fe-59 produced by protons on a natural Cu target"
+\image html NatCu_Mn54.png "Cross-section of Mn-54 produced by protons on a natural Cu target"
+\image html NatCu_Sc46.png "Cross-section of Sc-46 produced by protons on a natural Cu target"
+\image html NatCu_Zn65.png "Cross-section of Zn-65 produced by protons on a natural Cu target"
+\image html NatCu_Zn65_DataTables.png "Cross-section of Zn-65 produced by protons on a natural Cu target with MENDL-2 data tables"
+
+<hr>
+
+\section natge Cross-section plots for protons on a natural germanium target
+
+\image html NatGe_Co56.png "Cross-section of Co-56 produced by protons on a natural Ge target"
+\image html NatGe_Co57.png "Cross-section of Co-57 produced by protons on a natural Ge target"
+\image html NatGe_Co58.png "Cross-section of Co-58 produced by protons on a natural Ge target"
+\image html NatGe_Co60.png "Cross-section of Co-60 produced by protons on a natural Ge target"
+\image html NatGe_Fe55.png "Cross-section of Fe-55 produced by protons on a natural Ge target"
+\image html NatGe_Ge68.png "Cross-section of Ge-68 produced by protons on a natural Ge target"
+\image html NatGe_Ge68_DataTables.png "Cross-section of Ge-68 produced by protons on a natural Ge target with MENDL-2 data tables"
+\image html NatGe_Mn54.png "Cross-section of Mn-54 produced by protons on a natural Ge target"
+\image html NatGe_Ni63.png "Cross-section of Ni-63 produced by protons on a natural Ge target"
+\image html NatGe_Zn65.png "Cross-section of Zn-65 produced by protons on a natural Ge target"
+
+<hr>
+
+\section natte Cross-section plots for protons on a natural tellurium target
+
+\image html NatTe_Co60.png "Cross-section of Co-60 produced by protons on a natural Te target"
+\image html NatTe_I121.png "Cross-section of I-121 produced by protons on a natural Te target"
+\image html NatTe_I123.png "Cross-section of I-123 produced by protons on a natural Te target"
+\image html NatTe_I124.png "Cross-section of I-124 produced by protons on a natural Te target"
+\image html NatTe_I125.png "Cross-section of I-125 produced by protons on a natural Te target"
+\image html NatTe_I126.png "Cross-section of I-126 produced by protons on a natural Te target"
+\image html NatTe_I128.png "Cross-section of I-128 produced by protons on a natural Te target"
+\image html NatTe_I128_DataTables.png "Cross-section of I-128 produced by protons on a natural Te target"
+\image html NatTe_I130.png "Cross-section of I-130 produced by protons on a natural Te target"
+\image html NatTe_Sb124.png "Cross-section of Sb-124 produced by protons on a natural Te target"
+\image html NatTe_Sb125.png "Cross-section of Sb-125 produced by protons on a natural Te target"
+
+
+*/
