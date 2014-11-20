@@ -11,7 +11,7 @@ production and decay yields of (radioactive) isotopes from cosmic ray
 activation using data tables and semi-empirical formulae, as detailed 
 in the paper "ACTIVIA: Calculation of isotope production cross-sections 
 and yields", published in Nucl. Instrum. Meth A. 586, 286 (2008), 
-also available on the arXiv: http://uk.arxiv.org/abs/0709.3472.
+also available on the arXiv: http://arxiv.org/abs/0709.3472.
 
 This file explains how to build and run the ACTIVIA code to perform
 calculations of cross-sections and yields for radioactive isotopes.
