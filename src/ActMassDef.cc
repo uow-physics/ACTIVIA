@@ -75,14 +75,14 @@ double ActMassDef::calcMass() {
 
   double oneThird = 1.0/3.0;
   double twoThirds = 2.0*oneThird;
-  double zExp23 = pow(_z, twoThirds);
-  double aExp23 = pow(_a, twoThirds);
-  double aExp13 = pow(_a, oneThird);
+  double zExp23 = std::pow(_z, twoThirds);
+  double aExp23 = std::pow(_a, twoThirds);
+  double aExp13 = std::pow(_a, oneThird);
 
   double term1 = 0.8076*_z*_z*(1.0 - (0.7636/zExp23) - (2.29/aExp23))/aExp13;
   double term2 = _gamma*aExp23;
   double a2z = _a - 2.0*_z;
-  double term3 = (_beta - (_eta/aExp13))*(a2z*a2z + 2.0*fabs(a2z))/_a;
+  double term3 = (_beta - (_eta/aExp13))*(a2z*a2z + 2.0*std::fabs(a2z))/_a;
 
   xmass += term1 + term2 + term3;
 
@@ -106,13 +106,13 @@ double ActMassDef::calcMass() {
 
   if (k >= 0 && k < _nmagicn-1) {
     double denom = _magicn[k+1] - _magicn[k];
-    if (fabs(denom) > 1e-30) {
+    if (std::fabs(denom) > 1e-30) {
       zprime = (_z - _magicn[k])/denom;
     }
   } 
   if (j >= 0 && j < _nmagicn-1) {
     double denom = _magicn[j+1] - _magicn[j];
-    if (fabs(denom) > 1e-30) {
+    if (std::fabs(denom) > 1e-30) {
       nprime = (n - _magicn[j])/denom;
     }
   } 
@@ -148,7 +148,7 @@ double ActMassDef::calcMass() {
 
 double ActMassDef::del(double a) {
 
-  double term = pow((280.0-a), 2.3);
+  double term = std::pow((280.0-a), 2.3);
   double del = 5.00e-6*term + 0.687;
   return del;
 

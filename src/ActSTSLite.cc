@@ -145,7 +145,7 @@ double ActSTSLite::calcSLiteSigma(std::string name) {
     return 0.0;
   }
   
-  double absVar = fabs((_t*_a - _s)*_a + _z);
+  double absVar = std::fabs((_t*_a - _s)*_a + _z);
   
   double omega = _formulae.calcOmega(_z, _a, name);
   double xi = _formulae.calcXi(_at, _z, _a);
@@ -171,7 +171,7 @@ void ActSTSLite::calcLite1Values(int ioe) {
   _r = 1.8;
   // S parameter includes update ST'85, p875, Eq 1
   double atzt(0.0);
-  if (fabs(_zt) > 1e-30) {atzt = _at/_zt;}
+  if (std::fabs(_zt) > 1e-30) {atzt = _at/_zt;}
   double atzt2 = atzt - 2.0;
   if (atzt2 > 0.0) {
     _s = -0.32*_formulae.power(atzt2, 1.4) + 0.54;
@@ -206,7 +206,7 @@ void ActSTSLite::calcLite1Values(int ioe) {
     } else {
       double term1 = _formulae.f11(_e, _ezero);
       double eratio(0.0);
-      if (fabs(_ezero) > 1e-30) {eratio = 2262.0*_e/_ezero;}
+      if (std::fabs(_ezero) > 1e-30) {eratio = 2262.0*_e/_ezero;}
       double term2 = _formulae.f11(eratio, _ezero);
       double product = term1*term2;
       if (product > 0.0) {_corr = sqrt(product);}
@@ -232,7 +232,7 @@ void ActSTSLite::calcLite2Values(int ioe) {
   
   // S parameter includes update ST'85, p875, Eq 1
   double atzt(0.0);
-  if (fabs(_zt) > 1e-30) {atzt = _at/_zt;}
+  if (std::fabs(_zt) > 1e-30) {atzt = _at/_zt;}
   double atzt2 = atzt - 2.0;
   if (atzt2 > 0.0) {
     _s = -0.26*_formulae.power(atzt2, 1.4) + 0.502;
@@ -245,7 +245,7 @@ void ActSTSLite::calcLite2Values(int ioe) {
   _etasel = _eta[ioe][1];
   double term1 = _formulae.power(_at, (2.0/3.0)) - 1.0;
   double term2 = -0.3*(_logat - log(20.0)) + 1.0;
-  if (fabs(_r) > 1e-30) {_sig0 = 28.0*term1*term2;}
+  if (std::fabs(_r) > 1e-30) {_sig0 = 28.0*term1*term2;}
 
   // Update from ST'90, p369
   if (_izt >= 14) {
@@ -259,7 +259,7 @@ void ActSTSLite::calcLite2Values(int ioe) {
   }
 
   double denom = -_formulae.expfun(-_p*_at) + 1.0;
-  if (_r > 1e-30 && fabs(denom) >= 1e-30) {
+  if (_r > 1e-30 && std::fabs(denom) >= 1e-30) {
     _sig0 *= g*_p*sqrt(_r)/denom;
   }
 
@@ -282,7 +282,7 @@ void ActSTSLite::calcLite3Values(int ioe) {
   if (_e < _ezero) {_p = 1.97*_formulae.power(_at, -0.9);}
 
   double atzt(0.0);
-  if (fabs(_zt) > 1e-30) {atzt = _at/_zt;}
+  if (std::fabs(_zt) > 1e-30) {atzt = _at/_zt;}
   _s = -0.06*(atzt - 2.0) + 0.502; // update from ST'85, p874
   _t = 0.0005;
   _nu = 2.0;
@@ -307,7 +307,7 @@ void ActSTSLite::calcLite3Values(int ioe) {
   }
 
   double denom = -_formulae.expfun(-_p*_at) + 1.0;
-  if (_r > 1e-30 && fabs(denom) > 1e-30) {
+  if (_r > 1e-30 && std::fabs(denom) > 1e-30) {
     _sig0 *= (g*_p*sqrt(_r)/denom);
   }
 
@@ -318,7 +318,7 @@ void ActSTSLite::calcLite4Values(int ioe) {
   this->initLiteParam();
 
   double atzt(0.0);
-  if (fabs(_zt) > 1e-30) {atzt = (_at - _atbar)/_zt;}
+  if (std::fabs(_zt) > 1e-30) {atzt = (_at - _atbar)/_zt;}
   // Updates from ST'90, p368
   _s = -0.07*atzt + 0.482;
   _t = 0.00028;

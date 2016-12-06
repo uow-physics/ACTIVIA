@@ -98,7 +98,7 @@ double ActXSecGraph::calcSigma(double energy) {
     double EVal = point.getX();
     double SVal = point.getY();
 
-    double dE = fabs(EVal - energy);
+    double dE = std::fabs(EVal - energy);
 
     if (EVal < energy || dE < 1e-6) {
 
@@ -120,7 +120,7 @@ double ActXSecGraph::calcSigma(double energy) {
   // Do the linear interpolation to get the sigma value.
   double deltaE = E2 - E1;
 
-  if (fabs(deltaE) < 1e-6) {
+  if (std::fabs(deltaE) < 1e-6) {
     // E1 and E2 are the same. Return the sigma1 value (=sigma2).
     sigma = sigma1;
   } else {

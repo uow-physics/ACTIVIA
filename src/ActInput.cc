@@ -415,6 +415,6 @@ void ActInput::printIntro() {
   cout << endl
        << "Activia - Calculation of Isotope Production Cross-Sections and Yields" << endl
        << "Developed by John Back and Yorck Ramachers" << endl
-       << "Copyright (C) 2007-2014 University of Warwick"   << endl << endl;
+       << "Copyright (C) 2007-2016 University of Warwick"   << endl << endl;
 
 }

@@ -20,9 +20,9 @@ double ActFormulae::nzstar(double zp, double ap, double zt,
 
   double np = ap - zp;
   double ratio1(0.0);
-  if (fabs(zp) > 1e-30) {ratio1 = np/zp;}
+  if (std::fabs(zp) > 1e-30) {ratio1 = np/zp;}
   double ratio2(0.0);
-  if (fabs(zt) > 1e-30) {ratio2 = (at - atbar)/zt;}
+  if (std::fabs(zt) > 1e-30) {ratio2 = (at - atbar)/zt;}
   double nzstar = -0.3*ratio2 + ratio1;
 
   return nzstar;
@@ -36,7 +36,7 @@ double ActFormulae::bigg(double z, double a, double zt,
   double ac = a;
   double zc = z;
   double nvrz(0.0), nvrzt(0.0);
-  if (fabs(z) > 1e-30 && fabs(zt) > 1e-30) {
+  if (std::fabs(z) > 1e-30 && std::fabs(zt) > 1e-30) {
     nvrz = (a/z) - 1.0;
     nvrzt = (at/zt) - 1.0;
   }
@@ -76,7 +76,7 @@ double ActFormulae::fbe(double z, double a, double zt, double at,
 
     if (z >= 8.999) {alpha = 2.0;}
     double eratio(0.0);
-    if (fabs(ezero) > 1e-30) {eratio = e/ezero;}
+    if (std::fabs(ezero) > 1e-30) {eratio = e/ezero;}
     fbe = this->power(eratio, alpha);
 
     return fbe;
@@ -93,7 +93,7 @@ double ActFormulae::fbe(double z, double a, double zt, double at,
     double power2 = 0.02*upsln;
     double ratio1(0.0), ratio2(0.0);
 
-    if (fabs(ezero) > 1e-30) {
+    if (std::fabs(ezero) > 1e-30) {
       ratio1 = e/ezero; ratio2 = e/ezero03;
     }
     double term1 = this->power(ratio1, power1);
@@ -107,7 +107,7 @@ double ActFormulae::fbe(double z, double a, double zt, double at,
     double power = -0.01*upsln + 2.2;
     double ratio(0.0);
 
-    if (fabs(ezero) > 1e-30) {ratio = e/ezero;}
+    if (std::fabs(ezero) > 1e-30) {ratio = e/ezero;}
 
     double term = this->power(ratio, power);
 
@@ -294,7 +294,7 @@ double ActFormulae::f1(double atgt, double e, double ezero) {
 
     f1 = this->expfun(0.0074*atgt - 0.25);
 
-  } else if (e < ezero && fabs(ezero - 750.0) > 1e-30) {
+  } else if (e < ezero && std::fabs(ezero - 750.0) > 1e-30) {
 
     double expTerm = this->expfun(0.0074*atgt - 0.25);
     double ratio = (ezero - e)/(ezero - 750.0);
@@ -411,10 +411,10 @@ double ActFormulae::invpat(double p, double at) {
   double pat = p*at;
   double pat03(0.0);
 
-  if (fabs(pat) > 1e-30) {pat03 = 0.3/pat;}
+  if (std::fabs(pat) > 1e-30) {pat03 = 0.3/pat;}
 
   double denom = -this->expfun(-pat)*(0.7 - pat03) + 1.0 - pat03;
-  if (fabs(denom) > 1e-30) {invpat = 1.0/denom;}
+  if (std::fabs(denom) > 1e-30) {invpat = 1.0/denom;}
   
   return invpat;
 
@@ -503,14 +503,14 @@ double ActFormulae::power(double x, double n) {
 
   // Special power law function to check against nan values
   // First protect against 1/0^n values (infinity)
-  if (fabs(x) < 1e-30 && n < 0.0) {return 0.0;}
+  if (std::fabs(x) < 1e-30 && n < 0.0) {return 0.0;}
 
   double power = pow(x, n);
 
-  if (isnan(power) == 1) {
+  if (std::isnan(power) == 1) {
     // Try |x|^n
-    power = pow(fabs(x), n);
-    if (isnan(power) == 1) {power = 0.0;}
+    power = std::pow(std::fabs(x), n);
+    if (std::isnan(power) == 1) {power = 0.0;}
   }
 
   return power;
@@ -520,7 +520,7 @@ double ActFormulae::expfun(double x) {
 
   // Limit exponential to ~10^{+-30}
   double expVal(0.0);
-  if (fabs(x) < 70.0) {expVal = exp(x);}
+  if (std::fabs(x) < 70.0) {expVal = exp(x);}
 
   return expVal;
 

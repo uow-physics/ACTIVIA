@@ -166,8 +166,8 @@ void ActGuiRun::about() {
 
   QMessageBox::about(this, QObject::tr("About Activia"),
 		     QObject::tr("<p> <h3> Activia - Calculation of isotope production cross-sections and yields </h3>"
- 				 "<p> Version 1.3.0 - developed by John Back and Yorck Ramachers </p>"
-	 			 "<p> Copyright (C) 2007-2014 University of Warwick</p>"
+ 				 "<p> Version 1.3.1 - developed by John Back and Yorck Ramachers </p>"
+	 			 "<p> Copyright (C) 2007-2016 University of Warwick</p>"
 				 "<p> See <a href=\"https://github.com/UniversityofWarwick/ACTIVIA\">"
 				 "https://github.com/UniversityofWarwick/ACTIVIA</a> for more information.</p>"));
 }
@@ -176,7 +176,7 @@ void ActGuiRun::license() {
 
   QMessageBox::about(this, QObject::tr("License"),
 		     QObject::tr("<h3> Activia: Calculation of Isotope Production Cross-Sections and Yields </h3>"
-				 "<p>Copyright (C) 2007-2014, University of Warwick.</p>"
+				 "<p>Copyright (C) 2007-2016, University of Warwick.</p>"
 				 "<p>Permission is hereby granted, free of charge, to any person or organization "
 				 "obtaining a copy of the software and accompanying documentation covered by "
 				 "this license (the \"Software\") to use, reproduce, display, distribute, "

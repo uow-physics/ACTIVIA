@@ -64,7 +64,7 @@ double ActSTEvaporation::calcCrossSection(ActNucleiData* data) {
   }
 
   double eratio(0.0);
-  if (fabs(ezero) > 1e-30) {eratio = e/ezero;}
+  if (std::fabs(ezero) > 1e-30) {eratio = e/ezero;}
   double fepse = fmin(_formulae.power(eratio, alpha), 1.0);
 
   if (_debug == 1) {

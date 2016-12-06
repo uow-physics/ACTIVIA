@@ -105,11 +105,11 @@ double ActSTSpallation::calcCrossSection(ActNucleiData* data) {
 
     // Implement top of p 339, eqn 2b
     double quo1(0.0), quo2(0.0);
-    if (fabs(sige0) > 1e-30) {quo1 = _sigma/sige0;}
+    if (std::fabs(sige0) > 1e-30) {quo1 = _sigma/sige0;}
     double biggVal = _formulae.bigg(z, a, zt, at, atbar, energy);
     double fbeVal = _formulae.fbe(z, a, zt, at, atbar, energy, ezero);
     
-    if (fabs(biggVal) > 1e-30) {quo2 = fbeVal/biggVal;}
+    if (std::fabs(biggVal) > 1e-30) {quo2 = fbeVal/biggVal;}
     
     if (quo1 < quo2) {
       if (_debug == 1) {cout<<"quo1 = "<<quo1<<", quo2 = "<<quo2<<endl;}
@@ -159,7 +159,7 @@ double ActSTSpallation::calcCrossSection(ActNucleiData* data) {
 
 	// Do the linear interpolation
         double grad = 0.0;
-        if (fabs(_EMaxDiff) > 1e-10) {grad = (sigEMax - sig1)/_EMaxDiff;}
+        if (std::fabs(_EMaxDiff) > 1e-10) {grad = (sigEMax - sig1)/_EMaxDiff;}
         _sigma = grad*(energy - _E1GeV) + sig1;
  
         if (_debug == 1) {cout<<"sigc = "<<_sigma<<endl;}
@@ -212,7 +212,7 @@ double ActSTSpallation::calcSpallSigma(ActNucleiData* data, double& dela) {
   // Now define parameters for the cross-section calculation
   // Use Table 1D, ST'73 I and updates
   double sratio(0.0);
-  if (fabs(zt) > 1e-30) {sratio = (at - atbar)/zt;}
+  if (std::fabs(zt) > 1e-30) {sratio = (at - atbar)/zt;}
   
   // Using the update from ST'90, pg 368
   double s = 0.482 - 0.07*sratio;
@@ -262,7 +262,7 @@ double ActSTSpallation::calcSpallSigma(ActNucleiData* data, double& dela) {
   
   double dacVal = _formulae.dac(at, ezero, ezero);
 
-  double absTerm = fabs(((3.0e-7*aprm + t)*aprm - s)*aprm + z);
+  double absTerm = std::fabs(((3.0e-7*aprm + t)*aprm - s)*aprm + z);
   double omega = _formulae.calcOmega(z, a, _name);
   double rpow = r*_formulae.power(absTerm, nu);
   double expTerm = -psup*dela - rpow;

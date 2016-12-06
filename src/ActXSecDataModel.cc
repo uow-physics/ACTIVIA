@@ -186,7 +186,7 @@ void ActXSecDataModel::storeXSecGraphs(std::string fileName,
 	double At = atof(lineVect[2].c_str());
 	// If we don't have the same values, exit this function, since
 	// this file does not have the right data...
-	if (!(Zt == targetZ && fabs(At - targetA) < 1e-10)) {return;}
+	if (!(Zt == targetZ && std::fabs(At - targetA) < 1e-10)) {return;}
 
       } else if (firstStr.compare("Product") == 0 || firstStr.compare("product") == 0) {
 
@@ -245,8 +245,8 @@ ActXSecGraph ActXSecDataModel::getXSecGraph(ActNucleiData* data) {
     double At = data->getat();
     double A = data->geta();
 
-    if (Zt == _Zt && fabs(At - _At) < 1e-6 && 
-	Z == _Z && fabs(A - _A) < 1e-6) {
+    if (Zt == _Zt && std::fabs(At - _At) < 1e-6 &&
+	Z == _Z && std::fabs(A - _A) < 1e-6) {
 
       // We have the same product and isotope information. Return the
       // already found graph (or the null Graph - the first graph assigned).

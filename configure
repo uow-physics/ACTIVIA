@@ -210,6 +210,25 @@ CXXFLAGS_OPT="-g -O2 -Wall -Wextra -Woverloaded-virtual -Werror -fPIC"
 # Debug mode compiler options
 CXXFLAGS_DBG="-g -Wall -Wextra -Woverloaded-virtual -Werror -fPIC"
 
+# Set C++11 compiler option
+CPP11=1
+# Check that we have gcc version 4.7 and above; otherwise turn off C++11
+theGcc=`g++ --version | grep '[0-9]\.[0-9]\.[0-9]' -o | head -1 | awk -F . '{print $1}'`
+theGcc2=`g++ --version | grep '[0-9]\.[0-9]\.[0-9]' -o | head -1 | awk -F . '{print $2}'`
+gccVar=`echo $theGcc`
+gccVar2=`echo $theGcc2`
+if [ $gccVar -le 4 ]; then
+  if [ $gccVar2 -le 6 ]; then
+    CPP11=0
+  fi
+fi
+# Enable C++11 if we can
+if [ $CPP11 = 1 ]; then
+  echo "Enabling c++11 features"
+  CXXFLAGS_OPT+=" -std=c++11"
+  CXXFLAGS_DBG+=" -std=c++11"
+fi
+
 # Option to generate dependency files
 MFLAGS=-MM
 

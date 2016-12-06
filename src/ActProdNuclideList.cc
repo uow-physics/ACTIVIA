@@ -136,7 +136,7 @@ ActProdNuclide* ActProdNuclideList::getProdNuclide(int Z, double A) {
     int isoZ = isoEntry->getZ();
     double isoA = isoEntry->getA();
 
-    if ((Z == isoZ) && fabs(A - isoA) < 1e-6) {
+    if ((Z == isoZ) && std::fabs(A - isoA) < 1e-6) {
       gotNuclide = true;
       prodNuclide = isoEntry;
     }

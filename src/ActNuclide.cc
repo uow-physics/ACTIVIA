@@ -27,7 +27,7 @@ bool ActNuclide::operator<(const ActNuclide& other) const {
 
   if (_Z == other._Z && _A < other._A) {return true;}
 
-  if (_Z == other._Z && fabs(_A - other._A) < 1e-10 && 
+  if (_Z == other._Z && std::fabs(_A - other._A) < 1e-10 &&
       _halfLife < other._halfLife) {return true;}
 
   return lessThan;
@@ -38,8 +38,8 @@ bool ActNuclide::operator==(const ActNuclide& other) const {
 
   bool equalTo(false);
 
-  if (_Z == other._Z && fabs(_A - other._A) < 1e-10 &&
-      fabs(_halfLife - other._halfLife) < 1e-10) {
+  if (_Z == other._Z && std::fabs(_A - other._A) < 1e-10 &&
+      std::fabs(_halfLife - other._halfLife) < 1e-10) {
     equalTo = true;
   }
 

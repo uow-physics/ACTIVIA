@@ -275,7 +275,7 @@ double ActTarget::getFraction(double A) {
 
       AVal = isotope->getA();
 
-      if (fabs(AVal - A) < 1e-6) {
+      if (std::fabs(AVal - A) < 1e-6) {
 	fraction = isotope->getFraction();
 	break;
       }

@@ -50,15 +50,15 @@ double ActTritiumModel::calcCrossSection(ActNucleiData* data) {
 
   double atec = at*ec;
   double exp1(0.0);
-  if (fabs(etaea) > 1e-30) {exp1 = atec/(3.0*etaea);}
+  if (std::fabs(etaea) > 1e-30) {exp1 = atec/(3.0*etaea);}
   double estar = etaea*(1.0 - _formulae.expfun(-exp1)); // Eq 14a
 
   double exp2(0.0);
-  if (fabs(etaeadum) > 1e-30) {exp2 = atec/(3.0*etaeadum);}
+  if (std::fabs(etaeadum) > 1e-30) {exp2 = atec/(3.0*etaeadum);}
   double estardum = etaeadum*(1.0 - _formulae.expfun(-exp2));
 
   double ratio1(0.0), ratio2(0.0);
-  if (fabs(at) > 1e-30) {
+  if (std::fabs(at) > 1e-30) {
     ratio1 = estar/at; ratio2 = estardum/at;
   }
   // Nuclear temperature
@@ -81,7 +81,7 @@ double ActTritiumModel::calcCrossSection(ActNucleiData* data) {
   // Eq 5a
   double ncasc = sqrtatp1*_formulae.expfun(-zetaa*_formulae.expfun(-lambdaa*(loge - log368)));
   double loged(0.0);
-  if (fabs(edummy) > 1e-30) {loged = log(edummy);}
+  if (std::fabs(edummy) > 1e-30) {loged = log(edummy);}
   double ncascdum = sqrtatp1*_formulae.expfun(-zetaa*_formulae.expfun(-lambdaa*(loged - log368)));
 
   double epseps = aeps*zt + beps; // Eq 6
@@ -125,26 +125,26 @@ double ActTritiumModel::calcCrossSection(ActNucleiData* data) {
 
   // Calculate G_th, Eq 7
   double estte(0.0);
-  if (fabs(te) > 1e-30) {estte = (e - st)/te;}
+  if (std::fabs(te) > 1e-30) {estte = (e - st)/te;}
   double gth = 1.0 - (1.0 + estte)*_formulae.expfun(-estte);
 
   double esttedum(0.0);
-  if (fabs(tdum) > 1e-30) {esttedum = (edummy - st)/tdum;}
+  if (std::fabs(tdum) > 1e-30) {esttedum = (edummy - st)/tdum;}
   double gthdum = 1.0 - (1.0 + esttedum)*_formulae.expfun(-esttedum);
 
   // Work out Eq 2 for E = 600 MeV
   double expeps(0.06*epseps);
   double n0atr(0.0);
-  if (fabs(atrit) > 1e-30) {n0atr = n0*(at/atrit);}
+  if (std::fabs(atrit) > 1e-30) {n0atr = n0*(at/atrit);}
   double fpre600(0.0);
-  if (fabs(at) > 1e-30) {
+  if (std::fabs(at) > 1e-30) {
     fpre600 = n0atr*rtdum*gthdum*_formulae.power((ncascdum/at), expeps);
   }
 
   double tdumec = tdum + ec;
   // Work out Eq 3
   double feq600(0.0);
-  if (fabs(tdum) > 1e-30 && fabs(tdumec) > 1e-30) {
+  if (std::fabs(tdum) > 1e-30 && std::fabs(tdumec) > 1e-30) {
     feq600 = _formulae.expfun(-btrit/tdum)*gthdum*estardum/tdumec;
   }
 
@@ -152,20 +152,20 @@ double ActTritiumModel::calcCrossSection(ActNucleiData* data) {
   double sn = this->sigmanon(data);
 
   double w(0.0);
-  if (fabs(sn) > 1e-30 && fabs(feq600) > 1e-30) {
+  if (std::fabs(sn) > 1e-30 && std::fabs(feq600) > 1e-30) {
     w = ((sigmaeval/sn) - fpre600)/feq600; // Eq 16
   }
 
   // Eq 2 for energy E
   double fpre(0.0);
-  if (fabs(at) > 1e-30) {
+  if (std::fabs(at) > 1e-30) {
     fpre = n0atr*rt*gth*_formulae.power((ncasc/at), expeps);
   }
 
   // Eq 3 for energy E
   double teec = te + ec;
   double feq(0.0);
-  if (fabs(te) > 1e-30 && fabs(teec) > 1e-30) {
+  if (std::fabs(te) > 1e-30 && std::fabs(teec) > 1e-30) {
     feq = _formulae.expfun(-btrit/te)*gth*estar/teec;
   }
 

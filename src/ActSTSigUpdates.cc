@@ -107,8 +107,8 @@ void ActSTSigUpdates::updateSigma(ActNucleiData& data, double& sigma) {
     int idz = izt - iz;
     if (idz >= 5) {
       double e = data.gete();
-      double exp1 = fabs(e - 1230.0)/150.0;
-      double exp2 = fabs(idz*1.0 - 12.0)/5.0;
+      double exp1 = std::fabs(e - 1230.0)/150.0;
+      double exp2 = std::fabs(idz*1.0 - 12.0)/5.0;
       double F = 0.9*exp(-exp1*exp1)*exp(-exp2*exp2) + 1.0;
       sigma *= F;
     }   

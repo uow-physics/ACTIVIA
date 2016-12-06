@@ -212,7 +212,7 @@ std::string ActSTSelect::findFormula() {
 
     double nzcVal = nzc(_at, _zt, dela, _ezero, _atbar);
     double ratio = 0.0;
-    if (fabs(_zt) >= 1e-30) {ratio = (_at - _zt)/_zt;}
+    if (std::fabs(_zt) >= 1e-30) {ratio = (_at - _zt)/_zt;}
     if (ratio <= nzcVal) {
       formula = "spal";
       return formula;
@@ -256,7 +256,7 @@ double ActSTSelect::nzc(double at, double zt, double dela,
 
   double delacVal = this->delac(at, ezero, ezero);
   double ratio = 0.0;
-  if (fabs(zt) >= 1e-30) {ratio = (at - atbar)/zt;}
+  if (std::fabs(zt) >= 1e-30) {ratio = (at - atbar)/zt;}
   double nzc = 0.005*(delacVal - dela) + 0.3*ratio + 1.29;
   return nzc;
 

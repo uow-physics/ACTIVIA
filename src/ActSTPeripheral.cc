@@ -210,7 +210,7 @@ double ActSTPeripheral::calcxnSigma(ActNucleiData* data) {
 
   double e0pxn = 300.0*x + 500.0;
   double nzt(0.0), comb(0.0);
-  if (fabs(zt) >= 1e-30) {
+  if (std::fabs(zt) >= 1e-30) {
     nzt = (at - zt)/zt;
     comb = ((1.0 - x)/zt) + nzt;
   }
@@ -318,7 +318,7 @@ double ActSTPeripheral::calcpxnSigma(ActNucleiData* data) {
     sigma = sige0*hofe*yieldVal;
     
     // Update ST'98: enhancement by electromagnetic dissociation near 10 GeV
-    if (fabs(e - 10.0e3) < 0.1) {
+    if (std::fabs(e - 10.0e3) < 0.1) {
       double zt80 = zt/80.0;
       double F = 0.15*zt80*zt80 + 1.0;
       sigma *= F;
@@ -405,7 +405,7 @@ double ActSTPeripheral::calc2pSigma(ActNucleiData* data) {
     double nt = data->getnt();
     if (nt > 0.0) {
       double nRatio = zt/nt;
-      if (nRatio < 1.0 && fabs(nt - 2.0) > 1e-6) {
+      if (nRatio < 1.0 && std::fabs(nt - 2.0) > 1e-6) {
 	sige0 *= (zt - 2.0)/(nt - 2.0);
       }
     }
@@ -623,7 +623,7 @@ double ActSTPeripheral::calc3pxnSigma(ActNucleiData* data) {
 	
 	double denom = 10.0*(at - a) + 15.0;
 	double eratio(0.0);
-	if (fabs(denom) > 1e-30) {
+	if (std::fabs(denom) > 1e-30) {
 	  eratio = e/denom;
 	}
 	double exp1 = _formulae.power(eratio, 4.0);
@@ -726,7 +726,7 @@ void ActSTPeripheral::apply3pxnCorrection(ActNucleiData* data, double& sigma) {
       double A0(0.0);
       ActSTSpallation spallation("spal", false, false);
 
-      if (A0Term > 0.0 && fabs(t) > 1e-30) {
+      if (A0Term > 0.0 && std::fabs(t) > 1e-30) {
 	A0 = (s - sqrt(A0Term))/(2.0*t);
 	int iz = data->getiz();
 	int izt = data->getizt();
@@ -759,7 +759,7 @@ void ActSTPeripheral::apply3pxnCorrection(ActNucleiData* data, double& sigma) {
 
 	double xRatio(0.0);
 	double x0Diff = x0 - xmax;
-	if (fabs(x0Diff) > 1e-6) {xRatio = (x - xmax)/x0Diff;}
+	if (std::fabs(x0Diff) > 1e-6) {xRatio = (x - xmax)/x0Diff;}
 	
 	// Calculate final sigma value (Eq 17)
 	sigma = (sig_x0 - sig_xmax)*xRatio + sig_xmax;
@@ -776,7 +776,7 @@ void ActSTPeripheral::apply3pxnCorrection(ActNucleiData* data, double& sigma) {
 
 double ActSTPeripheral::pxnsig(double x, double nzt) {
 
-  double absTerm = fabs(6.9 - x)/4.5;
+  double absTerm = std::fabs(6.9 - x)/4.5;
   double exp1 = _formulae.power(absTerm, 2.8);
   double exp2 = _formulae.power(x, 2.35);
   double exp3 = _formulae.power((1.5 - nzt), 5.0);
@@ -794,10 +794,10 @@ double ActSTPeripheral::pxng(double at, double e, double x) {
 
   double exp1 = 1.3 - f1;
   double inv20e(0.0);
-  if (fabs(e) > 1e-30) {inv20e = 20.0/e;}
+  if (std::fabs(e) > 1e-30) {inv20e = 20.0/e;}
   double denom = inv20e*_formulae.power(x, 1.5) + e;
   double term(0.0);
-  if (fabs(denom) > 1e-30) {term = 1300.0/denom;}
+  if (std::fabs(denom) > 1e-30) {term = 1300.0/denom;}
 
   double pxng = _formulae.power(term, exp1);
 
@@ -847,7 +847,7 @@ double ActSTPeripheral::pxnh(double at, double zt, double ap,
     }
   }
 
-  if (fabs(denom) >= 1e-30) {
+  if (std::fabs(denom) >= 1e-30) {
     dummy = num/denom;
     dummy *= dummy;
     dummy = 0.6*x + 0.5*dummy;
@@ -856,7 +856,7 @@ double ActSTPeripheral::pxnh(double at, double zt, double ap,
   double denom2 = -_formulae.power(x, -4.0) + 2.0;
   double dummy2(0.0);
 
-  if (fabs(denom2) > 1e-30) {
+  if (std::fabs(denom2) > 1e-30) {
     double term2 = 0.03*at/denom2;
     dummy2 = _formulae.power(term2, 3.0);
   }
@@ -881,7 +881,7 @@ double ActSTPeripheral::pxnf(double at, double zt, double ap,
   dummy = (0.1*x + 12.0)*x - dummy;
 
   double invDummy(0.0);
-  if (fabs(dummy) > 1e-30) {invDummy = 1.0/dummy;}
+  if (std::fabs(dummy) > 1e-30) {invDummy = 1.0/dummy;}
   double power = 1.5*x + 1.0;
 
   double delta(0.0);
@@ -935,7 +935,7 @@ double ActSTPeripheral::yield(double d, double at, double atbar,
 
     double dummy = (at - atbar)*d;
     double invzt(0.0);
-    if (fabs(zt) > 1e-30) {invzt = 1.0/zt;}
+    if (std::fabs(zt) > 1e-30) {invzt = 1.0/zt;}
     
     if (dummy <= 0.0) {
       yield = _formulae.expfun(dummy*invzt);
@@ -975,7 +975,7 @@ double ActSTPeripheral::h3(double at, double a, double e) {
 
   double denom = 10.0*(at - a) + 15.0;
   double eratio(0.0);
-  if (fabs(denom) > 1e-30) {
+  if (std::fabs(denom) > 1e-30) {
     eratio = e/denom;
   }
 
@@ -989,7 +989,7 @@ double ActSTPeripheral::h3(double at, double a, double e) {
 double ActSTPeripheral::h4(double e) {
 
   double inve(0.0);
-  if (fabs(e) > 1e-30) {inve = 1.0/e;}
+  if (std::fabs(e) > 1e-30) {inve = 1.0/e;}
 
   double h4 = 400.0*inve - 2.2;
   if (h4 > 2.0) {

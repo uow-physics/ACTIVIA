@@ -50,8 +50,8 @@ double ActSTFission::calcCrossSection(ActNucleiData* data) {
   // Calculate energy dependence factor, eqn 5 etc.
   double nvzstr = _formulae.nzstar(z, a, zt, at, atbar);
   double novrz(0.0), novrzt(0.0);
-  if (fabs(z) > 1e-30) {novrz = (a - z)/z;}
-  if (fabs(zt) > 1e-30) {novrzt = (at - zt)/zt;}
+  if (std::fabs(z) > 1e-30) {novrz = (a - z)/z;}
+  if (std::fabs(zt) > 1e-30) {novrzt = (at - zt)/zt;}
 
   // See last paragraph p 349
   if (novrz > novrzt) {
@@ -60,7 +60,7 @@ double ActSTFission::calcCrossSection(ActNucleiData* data) {
 
   // See equations p 349
   double inve(0.0);
-  if (fabs(e) > 1e-30) {inve = 1.0/e;}
+  if (std::fabs(e) > 1e-30) {inve = 1.0/e;}
 
   double ay = 19.0*_formulae.power((450.0*inve), 0.6);
   double pow1 = _formulae.power((350.0*inve), 4.0);
@@ -85,9 +85,9 @@ double ActSTFission::calcCrossSection(ActNucleiData* data) {
   // Done with preliminaries on ff of f, plug into eqn 5
   double logTerm = log(5.5*_formulae.power(inve, 0.07));
   double termAt = 0.0065*(207.0 - at); // update from ST'85, Eq 13.
-  double absPow = fabs(e - 700.0)/700.0;
+  double absPow = std::fabs(e - 700.0)/700.0;
   double term2(0.0);
-  if (fabs(at) > 1e-30) {term2 = (a - 0.46*at)/(0.15*at);}
+  if (std::fabs(at) > 1e-30) {term2 = (a - 0.46*at)/(0.15*at);}
   double expPow = ay*(nvzstr - logTerm - termAt*_formulae.expfun(-absPow));
   expPow -= gee*term2*term2;
   expPow -= aitch;
@@ -112,7 +112,7 @@ double ActSTFission::calcCrossSection(ActNucleiData* data) {
   // Update from ST'90, p369
   if (izt >= 76 && izt <= 80) {
     double eratio(0.0);
-    if (fabs(ezero) > 1e-30) {eratio = e/ezero;}
+    if (std::fabs(ezero) > 1e-30) {eratio = e/ezero;}
     double dummyfac = 1050.0*inve + eratio;
     dummyfac = fmin(6.0, dummyfac);
     ffofe *= dummyfac;
