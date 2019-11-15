@@ -14,7 +14,7 @@ class ActAbsOutput;
 /// \brief Less than operator between two ActNuclide pointers in ActAbsDecayAlgorithm.
 
 struct ActDecayPtrLess {
-  bool operator() (ActNuclide* ptr1, ActNuclide* ptr2) {
+  bool operator() (const ActNuclide* ptr1, const ActNuclide* ptr2) const {
     return (*ptr1) < (*ptr2);
   }
 };
