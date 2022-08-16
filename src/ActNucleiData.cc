@@ -32,33 +32,6 @@ ActNucleiData::ActNucleiData()
 
 } 
 
-ActNucleiData::ActNucleiData(const ActNucleiData& other) : ActAbsData()
-{
-  // Copy constructor
-  _zbeam = other._zbeam; _abeam = other._abeam;
-  _izbeam = other._izbeam; _iabeam = other._iabeam;
-
-  _zt = other._zt; _at = other._at; 
-  _atbar = other._atbar; _z = other._z; 
-  _a = other._a; _e = other._e; _ezero = other._ezero;
-
-  _izt = other._izt; _iat = other._iat; 
-  _iz = other._iz; _ia = other._ia;
-
-  _nt = other._nt; _int = other._int; 
-  _n = other._n; _in = other._in;
-
-  _dnpt = other._dnpt; _idnpt = other._idnpt; 
-  _dnp = other._dnp; _idnp = other._idnp;
-
-  _x = other._x; _y = other._y; 
-  _ix = other._ix; _iy = other._iy; 
-
-  _ichg = other._ichg; _mdtgt = other._mdtgt; 
-  _thrse = other._thrse; _fraction = other._fraction;
-
-}
-
 ActNucleiData::~ActNucleiData() 
 {
   // Destructor

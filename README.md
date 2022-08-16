@@ -32,6 +32,7 @@ However, it can use ROOT, a general purpose C++ data analysis
 framework (http://root.cern.ch), for creating output files, and a
 graphical user interface (GUI) can be enabled based on the open source
 version of the Qt software framework (https://qt-project.org/downloads).
+The minimum g++ (gcc) compiler is version 5 for enabling C++17 features.
 
 The configure script should be run to set the compiler options,
 and to enable the ROOT output and/or the GUI extension.

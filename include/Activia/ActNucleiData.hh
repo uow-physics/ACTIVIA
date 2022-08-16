@@ -24,9 +24,6 @@ class ActNucleiData : public ActAbsData {
 		ActNuclide* product, double energy);
   ActNucleiData();
 
-  /// Copy constructor
-  ActNucleiData(const ActNucleiData& other);
-  
   virtual ~ActNucleiData();
 
   void initialise();
